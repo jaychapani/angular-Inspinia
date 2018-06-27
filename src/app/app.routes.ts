@@ -1,4 +1,4 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
 export const ROUTES: Routes = [
     // Main redirect
@@ -6,4 +6,4 @@ export const ROUTES: Routes = [
 
     // Handle all other routes
     { path: '**', redirectTo: 'starterview' }
-]  
+];
