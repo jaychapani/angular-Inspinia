@@ -26,7 +26,7 @@ export class SideNavigationComponent implements OnInit, AfterViewInit {
       });
     }
   }
-  activeRoute(routename: string): boolean{
+  activeRoute(routename: string): boolean {
     return this.router.url.indexOf(routename) > -1;
   }
 
