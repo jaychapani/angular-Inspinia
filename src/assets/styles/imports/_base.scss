@@ -1,5 +1,5 @@
 body {
-  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: arial, helvetica, sans-serif; // "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #2f4050;
   font-size: 13px;
   color: $text-color;
@@ -209,6 +209,10 @@ video {
     position: inherit;
     margin: 0 0 0 240px;
     //min-height: 2002px;
+  }
+
+  .navbar-right {
+    margin-right: 0px !important;;
   }
 }
 

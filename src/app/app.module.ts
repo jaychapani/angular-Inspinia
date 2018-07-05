@@ -9,10 +9,12 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 
 import { LayoutModule } from './components/layout/layout.module';
+import { DailyTaskComponent } from './components/daily-task/daily-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DailyTaskComponent,
   ],
   imports: [
     BrowserModule,

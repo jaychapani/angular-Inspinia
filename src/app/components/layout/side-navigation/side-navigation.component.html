@@ -2,18 +2,34 @@
   <div class="sidebar-collapse">
     <ul class="nav metismenu" id="side-menu">
       <li class="nav-header">
-        <div class="profile-element" dropdown>
-          <img alt="image" class="img-circle" src="assets/images/profile_small.jpg">
+        <div class="profile-element">
+          <a [routerLink]="['/dashboard']">
+            <img alt="image" src="assets/images/logo.svg">
+          </a>
         </div>
         <div class="logo-element">
-          IN+
+          <a [routerLink]="['/dashboard']">
+            <img alt="image" class="img-circle" src="assets/images/profile_small.jpg">
+          </a>
         </div>
       </li>
+      <li [ngClass]="{active: activeRoute('dailytask')}">
+        <a [routerLink]="['/dashboard/dailytask']">
+          <i class="fa fa-tasks"></i>
+          <span class="nav-label">Daily Tasks</span>
+        </a>
+      </li>
       <li [ngClass]="{active: activeRoute('starter')}">
-        <a [routerLink]="['/starterview']"><i class="fa fa-th-large"></i> <span class="nav-label">Starter view</span></a>
+        <a [routerLink]="['/starterview']">
+          <i class="fa fa-th-large"></i>
+          <span class="nav-label">Jurisdiction View</span>
+        </a>
       </li>
       <li [ngClass]="{active: activeRoute('login')}">
-        <a [routerLink]="['/login']"><i class="fa fa-th-large"></i> <span class="nav-label">Login example</span></a>
+        <a [routerLink]="['/login']">
+          <i class="fa fa-th-large"></i>
+          <span class="nav-label">Product View</span>
+        </a>
       </li>
     </ul>
   </div>

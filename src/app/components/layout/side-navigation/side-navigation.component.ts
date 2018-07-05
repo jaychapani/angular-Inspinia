@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {Router} from '@angular/router';
 import 'jquery-slimscroll';
 
 declare var jQuery: any;
@@ -11,7 +12,7 @@ declare var jQuery: any;
 })
 export class SideNavigationComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -25,6 +26,8 @@ export class SideNavigationComponent implements OnInit, AfterViewInit {
       });
     }
   }
-
+  activeRoute(routename: string): boolean{
+    return this.router.url.indexOf(routename) > -1;
+  }
 
 }
