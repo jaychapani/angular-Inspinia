@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 
 import { LayoutModule } from './components/layout/layout.module';
 import { DailyTaskComponent } from './components/daily-task/daily-task.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DailyTaskComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
