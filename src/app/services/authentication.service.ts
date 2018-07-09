@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    constructor(private http: HttpClient, private router:Router) { }
+    constructor(private http: HttpClient, private router: Router) { }
 
     login(username: string, password: string) {
         return this.http.post<any>('/api/authenticate', { username: username, password: password })
@@ -20,7 +20,7 @@ export class AuthenticationService {
 
     logout() {
         // remove user from local storage to log user out
-        this.router.navigate(["/login"]);
+        this.router.navigate(['/login']);
         localStorage.removeItem('currentUser');
     }
 }
