@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { smoothlyMenu } from '../../../app.helpers';
+import { first } from 'rxjs/operators';
+
 declare var jQuery: any;
+
+import { smoothlyMenu } from '../../../app.helpers';
+import { User } from '../../../models/user';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-topnavbar',
@@ -9,9 +14,14 @@ declare var jQuery: any;
 })
 export class TopnavbarComponent implements OnInit {
 
-  constructor() { }
+  users: User[] = [];
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getAll().pipe(first()).subscribe(users => {
+      this.users = users;
+    });
   }
 
   toggleNavigation(): void {

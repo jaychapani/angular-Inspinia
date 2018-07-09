@@ -7,14 +7,14 @@ import { AuthGuard } from './guards/auth.guard';
 
 export const ROUTES: Routes = [
     // Main redirect
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     {
-        path: 'dashboard', component: BaseLayoutComponent,
+        path: 'dashboard', component: BaseLayoutComponent, canActivate: [AuthGuard],
         children: [
-          {path: 'dailytask', component: DailyTaskComponent, canActivate: [AuthGuard]}
+            { path: 'dailytask', component: DailyTaskComponent }
         ]
-      },
+    },
     // Handle all other routes
     // { path: '**', redirectTo: 'starterview' }
 ];

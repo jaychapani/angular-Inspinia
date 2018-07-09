@@ -33,7 +33,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return of(new HttpResponse({ status: 200, body: [testUser] }));
                 } else {
                     // return 401 not authorised if token is null or invalid
-                    return throwError({ error: { message: 'Unauthorised' } });
+                    return throwError({ error: { status: 401, message: 'Unauthorised' } });
                 }
             }
 

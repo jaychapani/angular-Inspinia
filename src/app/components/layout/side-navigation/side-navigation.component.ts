@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import 'jquery-slimscroll';
 
 declare var jQuery: any;
